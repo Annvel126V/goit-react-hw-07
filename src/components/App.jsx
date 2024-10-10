@@ -7,6 +7,7 @@ import { fetchContacts } from "../redux/contactsOps";
 import { selectError, selectLoading } from "../redux/contactsSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+import Spiner from "./Spiner/Spiner";
 
 function App() {
   const dispatch = useDispatch();
@@ -23,7 +24,11 @@ function App() {
       </h1>
       <ContactForm />
       <SearchBox />
-      {isLoading && !error && <h2>Loading contacts...</h2>}
+      {isLoading && !error && (
+        <h2>
+          <Spiner />
+        </h2>
+      )}
       {error && <h2>{error}</h2>}
 
       <ContactList />
