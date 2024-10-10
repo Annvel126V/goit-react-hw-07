@@ -30,7 +30,7 @@ const contactSlice = createSlice({
           addContact.pending,
           deleteContact.pending
         ),
-        (state, action) => {
+        (state) => {
           state.loading = true;
         }
       )
@@ -41,7 +41,7 @@ const contactSlice = createSlice({
           addContact.fulfilled,
           deleteContact.fulfilled
         ),
-        (state, action) => {
+        (state) => {
           state.loading = false;
         }
       )

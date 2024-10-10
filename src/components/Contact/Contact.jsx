@@ -30,7 +30,7 @@ const Contact = ({ id, name, number }) => {
           {number}
         </li>
       </ul>
-      <button type="button" onClick={onDelete}>
+      <button className={s.btn} type="button" onClick={onDelete}>
         Delete
       </button>
     </div>
